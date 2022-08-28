@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");*{padding:0;margin:0}html,body{height:100%;padding:0;display:flex;flex-direction:column}body{background-color:rgba(0,0,0,0.6);background:url(../images/bg.jpg);background-size:cover;background-repeat:no-repeat;background-attachment:fixed;font-family:"Lato",sans-serif;color:rgba(255,255,255,0.9)}body>*{flex-shrink:0}a:link,a:visited,a:link{text-decoration:none;color:rgba(255,200,255,0.9)}a:hover{text-decoration:none;color:rgba(22,186,236,0.959)}h3{font-size:150%;font-weight:normal}h4{font-weight:normal;text-decoration:underline}code{color:rgba(22,186,236,0.959)}.header{text-align:center;margin-left:auto;margin-right:auto;margin-top:2.5%;width:50rem}main{background-color:rgba(0,0,0,0.6);text-align:center;margin-left:auto;margin-right:auto;margin-top:2.5%;margin-bottom:2%;padding-left:2%;padding-right:2%;width:50rem;flex-grow:1;border-radius:1%}.section{text-align:center;margin-left:auto;margin-right:auto;margin-top:2.5%;width:50rem}.title{padding-top:1.5%;padding-bottom:1.5%;border-bottom:1px solid rgba(255,255,255,0.5)}.post>*{padding-top:3%}.footer{padding-bottom:5%}
+
+/* Top navigation */
+#topnav {
+	position: relative;
+	margin-left: 10px;
+	margin-right: 15px;
+	display: block;
+	float: left;
+	white-space: nowrap; /* For Opera */
+	background-repeat: repeat-x;
+}
+#topnav, #topnav div, #search-box, #search-box div {
+	background-position: 0 -6px;
+	height: 24px;
+}
+#topnav div, #search-box div {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+}
+#topnav div.left {
+    left: -10px;
+    width: 10px;
+}
+#search-box div.left {
+    left: -20px;
+    width: 20px;
+    background-position: -20px -6px;
+}
+#topnav div.right, #search-box div.right {
+    right: -10px;
+    width: 10px;
+    background-position: -60px -6px;
+}
+
+#topnav ul.topnav {
+    margin: 0;
+    padding: 0;
+}
+#topnav ul.topnav li {
+    margin-top: 0;
+    padding-top: 5px;
+    line-height: 1em;
+}
+
+.topnav {
+    color: #a7a7a7;
+}
+
+.topnav a:link, .topnav a:visited {
+	color: #f7f7f7;
+}
+
+.topnav a:hover, .topnav .current a, .topnav .current a:visited, .topnav .current a:hover {
+	color: #aaaaaa;
+}
+
+.topnav a:active, .topnav .current a:active {
+	color: #aaaaaa;
+}
