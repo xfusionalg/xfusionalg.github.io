@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html><head>
+	<meta name="generator" content="Hugo 0.48" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+    
+        <title>
+                Arch Linux GUI
+        </title>
+    
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+    
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    
+            <link rel="stylesheet" href="./css/style.css">
+    </head>
+    
+    <div id="topnav">
+        <div class="left"></div>
+        <div class="right"></div>
+        <ul class="linklist topnav leftside">
+            
+        <a href="index.html" title="Main Page">Main Page</a>
+        <span>&bull;</span> <a href="https://github.com/xfusionalg" title="Github">Github</a>    
+        <span>&bull;</span> <a href="https://sourceforge.net/projects/archlinux-gui/" title="Sourceforge">Sourceforge</a>
+
+                 
+        </ul>
+    </div>
+    
+    <body><div class="header">
+    <h1>The Hidden Wiki</h1>
+</div><div id="content">
+
+<main>
+    
+    <div class="section">
+        <div class="title">
+            <h2>Instructions</h2>
+        </div>
+        <div class="post">
+            <p>Welcome to the Hidden Wiki, you will find helpful stuff here.</p>
+            
+           <p>If you have PGP key errors, like "keyring errors" "keyring could not be imported" etc then write theses commands:<br> <code>sudo mv /etc/pacman.d/gnupg /etc/pacman.d/gnupg.old</code> <br> <code>sudo pacman-key --init</code>  <br> <code>sudo pacman-key --populate</code> <br> <code>sudo pacman -Syyu</code></p> 
+           
+           <p>If you cannot update your system with pacman it's because of db.lck then write theses commands:<br> <code>sudo rm -f /var/lib/pacman/db.lck</code>  <br> <code>sudo pacman -Syu</code></p>
+
+<p>If you want to install Firefox Nightly then write theses commands:<br> <code>sudo pacman -Syyu</code> <br> <code>sudo pacman -S base-devel</code> <br> <code>sudo pacman -S git</code> <br> <code>git clone https://aur.archlinux.org/yay.git</code> <br> <code>cd yay</code> <br> <code>makepkg -si</code> <br> <code>yay -S firefox-nightly</code> <br> It will ask for a number write <code>3</code></p>
+
+<p>If you want to update Firefox Nightly then write theses commands:<br>  <code>yay -S firefox-nightly</code> <br> It will ask for a number write <code>3</code> </p>
+
+<p>If you want to install a Add/Remove software tool known as pamac aur, then write theses commands:<br> <code>yay -S pamac-aur</code></p>
+
+<p>If you want to install various softwares like a browser, an office suite then write theses commands:<br> <code>sudo -i</code><br> <code>pacman -S firefox</code><br> <code>pacman -S libreoffice</code><br> <code>pacman -S vlc</code><br> <code>pacman -S rhythmbox</code></p>
+
+<p>Cheers, <a href="https://github.com/xfusionalg">xfusion</a></p> 
+
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="title">
+            <h2>Make custom ISO</h2>
+        </div>
+        <div class="post">
+           
+<p>This is for advanced users only, if you want to make your own ISO write theses commands <br>
+<code>sudo -i</code><br><code>pacman -S archiso</code><br> Open documents in terminal then write<br> <code>cp -r /usr/share/archiso/configs/releng/ archlive</code><br>
+Navigate to the archlive folder created in documents<br>
+Open the packages.x86_64 and add any packages (optional)<br>
+Open the pacman.conf and add any new repos for your packages (optional)<br>
+Open archlive in terminal then write<br>
+<code>sudo mkarchiso -v .</code><br>
+ISO created in the out folder<br>
+</p>
+
+        </div>
+    </div>
+    
+    <section id="sec-archinstall" >
+    <div class="section">
+        <div class="title">
+            <h2>Enable archinstall to choose desktop environment</h2>
+        </div>
+        <div class="post">
+        
+        <p>
+        This tutorial will show you how to enable archinstall<br>
+        Firstly, boot on Arch Linux GUI ISO then open up a terminal<br>
+        Then write theses commands<br>
+        <code>sudo -i</code><br>
+        <code>rm -f /var/lib/pacman/db.lck</code><br>
+        <code>pacman -Sy</code/><br>
+        <code>pacman -S archlinux-keyring</code><br>
+        <code>pacman-key --init</code><br>
+        <code>pacman-key --populate</code><br>
+        <code>pacman-key --refresh-keys</code><br>
+        Wait while the keyrings are being refreshed, then write<br>
+        <code>archinstall</code><br>
+        You can install Arch Linux and select a custom Desktop environment<br>
+        </p>
+
+        </div>
+    </div>
+    </section>
+    
+     <div class="section">
+        <div class="title">
+            <h2>Install GPU Driver for 3D acceleration</h2>
+        </div>
+        <div class="post">
+           
+<p>For Intel GPU write theses commands<br>
+<code>sudo -i</code><br><code>pacman -Syu</code><br><code>pacman -S mesa mesa-utils</code><br>
+   </p>
+   
+   <p>For Nvidia GPU write theses commands<br>
+   <code>sudo -i</code><br><code>pacman -Syu</code><br><code> pacman -S nvidia nvidia-utils nvidia-settings</code>
+   </p>
+   
+   <p>For AMD GPU write theses commands<br>
+   <code>sudo -i</code><br><code>pacman -Syu</code><br><code> pacman -S mesa mesa-utils xf86-video-amdgpu</code>
+   </p>
+
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="title">
+            <h2>How to build a package for ALG</h2>
+        </div>
+        <div class="post">
+        
+        <p>You will need the git package
+        <code>sudo pacman -S git</code>
+        </p>
+        
+           
+<p>In this tutorial we will build alg-pure-cala-config package, the configuration files used by calamares<br>
+Open Home folder in terminal<br>
+Then do <code>git clone https://github.com/xfusionalg/alg-pure-cala-config.git</code><br>
+Open the new alg-pure-cala-config folder in terminal<br>
+Then do <code>makepkg</code><br>
+Your package is ready in a tar.zst file!<br>
+</p>
+
+<p>In this tutorial we will build calamares package, the installer framework used by Arch Linux GUI<br>
+Open Home folder in terminal<br>
+Then do <code>git clone https://github.com/xfusionalg/calamares.git</code><br>
+Navigate to the new calamares folder<br>
+Select the dep.sh script using mouse then Right-click on the file.<br>
+Choose Properties: Click Permissions tab and Select Allow executing file as a program<br>
+Now right click the dep.sh script and Select “Run in the terminal” <br>
+The dependencies to build calamares will be installed<br>
+Now open the calamares folder in terminal<br>
+Then do <code>makepkg</code><br>
+Your package is ready in a tar.zst file!
+</p>
+
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="title">
+            <h2>The ALG Repository</h2>
+        </div>
+        <div class="post">
+           
+<p> You may need to add the ALG Repository to your pacman.conf<br>
+<code>sudo -i</code><br>
+<code>gedit /etc/pacman.conf</code><br>
+Add the ALG Repository at the end of your pacman.conf<br>
+<code>[alg_repo]</code><br>
+<code>SigLevel = Optional TrustAll</code><br>
+<code>Server = https://xfusionalg.github.io/$arch</code><br>
+Then do a <code>pacman -Sy</code> to sync the repository<br>
+If you want to view the packages available you may check it on <a href="https://github.com/xfusionalg/xfusionalg.github.io/tree/main/x86_64">Github</a>
+</p>
+
+        </div>
+    </div>
+    
+      
+    <div class="section">
+        <div class="title">
+            <h2>Main Page</h2>
+        </div>
+        <div class="post">
+           
+<p><a href="index.html">Now bring me back to main page!</a></p>
+
+        </div>
+    </div>
+    
+    <div class="footer"\>
+</main>
+
+
+        </div></body>
+</html>
+
